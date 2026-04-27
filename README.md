@@ -97,14 +97,11 @@ The model does well on most classes but occasionally confuses diseases that look
 ## How to run it
 
 ```bash
-# Clone the repo
 git clone https://github.com/yourusername/crop-disease-detector.git
 cd crop-disease-detector
 
-# Install dependencies
 pip install torch torchvision Pillow matplotlib numpy jupyter
 
-# Launch the notebook
 jupyter notebook crop_disease_detection.ipynb
 ```
 
