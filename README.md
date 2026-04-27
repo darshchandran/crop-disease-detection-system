@@ -60,11 +60,9 @@ Dataset comes pre-organized into folders by class. Used PyTorch's `ImageFolder` 
 Instead of training a CNN from scratch (which would take days), loaded MobileNetV2 pretrained on ImageNet — it already knows how to detect edges, textures, and shapes from 1.2 million images. Froze all the base layers and only replaced the final classification head for our 38 classes.
 
 ```python
-# Freeze base layers — don't touch what's already learned
 for param in model.features.parameters():
     param.requires_grad = False
 
-# Replace classifier head for 38 classes
 model.classifier[1] = nn.Linear(model.last_channel, 38)
 ```
 
